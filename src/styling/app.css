@@ -1,4 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 #root{
     display: grid;
     grid-template-columns: 15rem 1fr 15rem;
+}
+
+header, main, footer{
+    grid-column: 1/-1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.hero {
+    grid-column: 1/-1;
+}
+
+.danish__home, .houses {
+
+    grid-column: 2/span 1;
+}
+
+nav{
+    grid-column: 2 / span 1;
+}
+
+
+.houses{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////// */
+
+:root{
+    --primary-color:#162A41;
+}
+
+/* //////////////////////////////////////////header ////////////////////////// */
+
+.header__contact, .search__btn{
+    background-color: var(--primary-color);
+    color:white;
+}
+
+/* //////////////////////////////////////////hero ////////////////////////// */
+
+
+.hero{
+  position: relative;
+}
+
+.search__home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* //////////////////////////////////////////marketing ////////////////////////// */
+
+.danish__home{
+    padding-block: 4rem;
+}
+
+
+/* //////////////////////////////////////////marketing ////////////////////////// */
+
+footer{
+    background-color: var(--primary-color);
+    color:white;
 }

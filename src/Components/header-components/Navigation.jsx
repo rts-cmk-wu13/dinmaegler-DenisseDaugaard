@@ -2,7 +2,7 @@ import { NavLink } from "react-router"
 
 import { SiMinutemailer } from "react-icons/si";
 import { BsTelephoneFill } from "react-icons/bs";
-import LogoutButton from "../LogoutButton";
+import LogoutButton from "../header-components/LogoutButton";
 
 
 
@@ -19,7 +19,7 @@ export default function Navigation() {
             <LogoutButton />
         </div>
         <nav className="navigation flex items-center justify-around py-4">
-            <img className="logo" src="./logo_2.svg" alt="Din Mægler Logo" />
+            <img className="logo" src="./logo.svg" alt="Din Mægler Logo" />
 
             <ul className="flex gap-4">
                 <li><NavLink to="/list">Boliger til salg</NavLink></li>

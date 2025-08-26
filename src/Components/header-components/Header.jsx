@@ -1,6 +1,6 @@
 import { useLocation } from "react-router"
 
-import Navigation from "./Navigation"
+import Navigation from "../header-components/Navigation"
 
 
 export default function Header() {

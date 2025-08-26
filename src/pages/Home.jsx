@@ -1,29 +1,17 @@
-import{useState, useEffect} from "react"
 
-import { GetAllHouses } from "../api/typicode"
-import Hero from "../Components/Hero";
-import MainInfo from "../Components/MainInfo";
+
+import Hero from "./Home_components/Hero";
+import MainInfo from "./Home_components/MainInfo";
+import Houses from "./Home_components/Houses";
 
 
 export default function Home() {
-
-    const [houses, setHouses] = useState()
-    
-    useEffect(() => {
-        const fetchAllHouses = async () => {
-            const houses = await GetAllHouses();
-            setHouses(houses);
-        }
-        fetchAllHouses();
-    }, []);
-    
-    console.log(houses);
    
-
     return (
         <>
         <Hero />
         <MainInfo/>
+        <Houses/>
         </>
     )
 }
