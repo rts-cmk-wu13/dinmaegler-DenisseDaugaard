@@ -42,7 +42,7 @@ export async function getUser({ params }) {
 
 
 
-/* ------------------------------------------------------- */
+/* --------------------------------------Houses ------------------------- */
 
 export async function GetAllHouses() {
 
@@ -55,5 +55,22 @@ export async function GetAllHouses() {
         }
         return response.json();
       }
+  });
+}
+
+
+/* -------------------------------------Agents ---------------------------- */
+
+export async function GetAllAgents() {
+
+  return queryClient.fetchQuery({
+    queryKey: ['agents'],
+    queryFn: async function () {
+      const response = await fetch('https://dinmaegler.onrender.com/agents');
+      if (!response.ok) {
+        throw new Error('Den er helt gal');
+      }
+      return response.json();
+    }
   });
 }

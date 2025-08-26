@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 import { GetAllHouses } from "../../api/typicode"
+import SectionHeader from "../../Components/header-components/SectionHeadder";
 
 export default function Houses() {
 
@@ -20,10 +21,10 @@ export default function Houses() {
 
     return (
         <section className="houses">
-            <header className="section__header">
-                <h2 className="text-2xl font-semibold">Udvalgte Boliger</h2>
-                <p>There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some</p>
-            </header>
+           <SectionHeader 
+           title="Udvalgte Boliger" 
+           description="There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some"
+           style="section__header" />
             {displayedHouses.map(house => (
                 <section className="house" key={house.id}>
                     <figure>
@@ -45,11 +46,9 @@ export default function Houses() {
                     </div>
                 </section>
             ))}
-            { !showAll && houses.length > 4 ? (
-                    <button className="bg-blue-950 text-white py-4 px-8 mx-auto" onClick={() => setShowAll(true)}>Se alle boliger</button>
-                ) : (
-                    <button className="bg-blue-950 text-white py-4 px-8 mx-auto" onClick={() => setShowAll(false)}>Vis færre boliger</button>
-                )}
+              <button className="bg-blue-950 text-white py-4 px-8 mx-auto" onClick={() => setShowAll(!showAll)}>
+               {showAll ? "Vis færre" : "Vis alle"}
+           </button>
         </section>
         
     )
