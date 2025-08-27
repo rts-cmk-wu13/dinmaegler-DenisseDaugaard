@@ -5,6 +5,7 @@ import MainInfo from "./Home_components/MainInfo";
 import Houses from "./Home_components/Houses";
 import NewsLetters from "./Home_components/NewsLetters";
 import Agents from "./Home_components/Agents";
+import StayUpdated from "./Home_components/StayUpdated";
 
 export default function Home() {
    
@@ -15,6 +16,7 @@ export default function Home() {
         <Houses/>
         <NewsLetters />
         <Agents />
+        <StayUpdated />
         </>
     )
 }

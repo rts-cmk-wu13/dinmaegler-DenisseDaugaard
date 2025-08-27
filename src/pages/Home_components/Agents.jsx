@@ -17,7 +17,7 @@ export default function Agents() {
        fetchData();
     }, []);
 
-    console.log(agents);
+    //console.log(agents);
     const displayedAgents = showAll ? agents : agents.slice(0, 3);
 
     return (
@@ -42,7 +42,7 @@ export default function Agents() {
                ))}
            </div>
 
-           <button className="bg-blue-950 text-white py-4 px-8 mx-auto" onClick={() => setShowAll(!showAll)}>
+           <button className="show__more__btn bg-blue-950 text-white py-4 px-8 mx-auto" onClick={() => setShowAll(!showAll)}>
                {showAll ? "Vis færre" : "Vis alle"}
            </button>
         </section>

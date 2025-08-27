@@ -22,8 +22,8 @@ export default function Navigation() {
             <img className="logo" src="./logo.svg" alt="Din Mægler Logo" />
 
             <ul className="flex gap-4">
-                <li><NavLink to="/list">Boliger til salg</NavLink></li>
-                <li><NavLink to="/contact">Mæglere</NavLink></li>
+                <li><NavLink to="/boliger-salg">Boliger til salg</NavLink></li>
+                <li><NavLink to="/maeglere">Mæglere</NavLink></li>
                 <li><NavLink to="/contact">Mine favoritter</NavLink></li>
                 <li><NavLink to="/contact">Kontakt os</NavLink></li>
             </ul>

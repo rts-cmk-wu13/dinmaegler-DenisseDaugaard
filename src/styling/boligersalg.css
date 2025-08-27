@@ -1,0 +1,29 @@
+
+.bolig__salg__hero {
+    background-image: url('./bg_2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+
+.bolig__salg__hero h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+
+.search__bolig,
+.search__results{
+    grid-column: 2 / span 1;
+}
+
+.search__results{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2rem;
+}
+
+

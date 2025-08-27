@@ -74,3 +74,19 @@ export async function GetAllAgents() {
     }
   });
 }
+
+/* ---------------------------------for sale--------------------------------- */
+
+// export async function GetAllHousesForSale() {
+
+//   return queryClient.fetchQuery({
+//     queryKey: ['homes', 'count'],
+//     queryFn: async function () {
+//       const response = await fetch('https://dinmaegler.onrender.com/homes/count');
+//       if (!response.ok) {
+//         throw new Error('Den er helt gal');
+//       }
+//       return response.json();
+//     }
+//   });
+// }

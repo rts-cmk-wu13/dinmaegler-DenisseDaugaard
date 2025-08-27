@@ -12,6 +12,9 @@ import { handleSubmit } from "./api/actions";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
 
+import BoligerTilSalg from "./pages/BoligerTilSalg";
+import Maeglere from "./pages/Maeglere";
+
 
 const router = createBrowserRouter([
     {
@@ -46,6 +49,14 @@ const router = createBrowserRouter([
                 path: "contact",
                 element: <Contact />,
                 action: handleSubmit,
+            },
+            {
+                path: "boliger-salg",
+                element: <BoligerTilSalg />
+            },
+            {
+                path: "maeglere",
+                element: <Maeglere />
             },
             {
                 path: "login",

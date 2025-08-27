@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -46,6 +48,13 @@ nav{
 
 :root{
     --primary-color:#162A41;
+    --text-color:#2A2C30;
+    --lightgrey-color:#7B7B7B;
+    --bg-color:#F8F8FB;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, button{
+    color: var(--text-color);
 }
 
 /* //////////////////////////////////////////header ////////////////////////// */
@@ -100,14 +109,6 @@ nav{
 }
 
 
-
-/* //////////////////////////////////////////marketing ////////////////////////// */
-
-footer{
-    background-color: var(--primary-color);
-    color:white;
-}
-
 /* /////////////////////////////////////////agents //////////////////////// */
 .agents{
     padding-bottom: 4rem;
@@ -119,3 +120,83 @@ footer{
     gap: 1rem;
     padding-block: 2rem;
 }
+
+.show__more__btn{
+    color: white;
+}
+
+/* /////////////////////////////stay updated ////////////////////////// */
+
+.stay__updated {
+  grid-column: 1 / -1;
+}
+
+/* //////////////////////////////////////////marketing ////////////////////////// */
+
+.rights{
+    background-color: var(--primary-color);
+    color:white;
+    text-align: center;
+    grid-column: 1 / -1;
+    padding-block: .75rem;
+}
+
+/* //////////////////////////////////////////footer ////////////////////////// */
+footer{
+    display: grid;
+    grid-template-columns: subgrid;
+    padding-top: 4rem;
+}
+
+.footer__wrapper{
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+
+.footer__acronym{
+    background-color: white;
+    color: var(--lightgrey-color);
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 40rem;
+}
+
+.footer__acronym div{
+    grid-column: 2 / span 1;
+    margin-block: 2rem;
+}
+
+.footer__logo{
+    grid-column: 1 / span 3;
+
+}
+
+.footer__links {
+    grid-column: 2/ span 1;
+    grid-row: 2/ span 1;
+ 
+}
+
+.footer__contact{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    top: 35%;
+}
+
+.footer__contact .contact__info{
+    padding: 1rem;
+}
+
+
+
+/* 
+
+
+.footer__links{
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+    padding: 1rem;
+} */
+
+
