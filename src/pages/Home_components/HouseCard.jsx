@@ -9,7 +9,7 @@ export default function HouseCard({ house }) {
                 <h2>{house.adress1}</h2>
                 <p>{house.city}</p>
                 <span className="border-b-1">
-                    <strong>{house.type}</strong> • Ejerudgift : {house.payment} kr.
+                    <strong>{house.type}</strong> • Ejerudgift : {house.cost} kr.
                 </span>
                 <div className="house__spect">
                     {house.energylabel === "A" ? (

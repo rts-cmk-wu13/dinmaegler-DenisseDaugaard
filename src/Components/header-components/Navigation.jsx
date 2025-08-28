@@ -19,7 +19,7 @@ export default function Navigation() {
             <LogoutButton />
         </div>
         <nav className="navigation flex items-center justify-around py-4">
-            <img className="logo" src="./logo.svg" alt="Din Mægler Logo" />
+            <img className="logo" src="/logo.svg" alt="Din Mægler Logo" />
 
             <ul className="flex gap-4">
                 <li><NavLink to="/boliger-salg">Boliger til salg</NavLink></li>

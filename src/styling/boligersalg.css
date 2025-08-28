@@ -1,6 +1,6 @@
 
 .bolig__salg__hero {
-    background-image: url('./bg_2.png');
+    background-image: url('/bg_2.png');
     background-size: cover;
     background-position: center;
     padding: 2rem 0;
@@ -30,7 +30,12 @@
 
 /* ////////////////////////House details///////////////////////// */
 
-.house__details{
+.house__details__hero{
     grid-column: 1 /-1;
+}
+
+.house__features,
+.house__description{
+    grid-column: 2 / span 1;
 }
 

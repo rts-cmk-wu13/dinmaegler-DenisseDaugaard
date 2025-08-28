@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="bg-[var(--bg-color)] relative">
             <div className="footer__wrapper">
                     <section className="footer__logo">
-                        <img src="./logo.svg" alt="logo" />
+                        <img src="/logo.svg" alt="logo" />
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
                     </section>
                     <section className="footer__links">
@@ -20,21 +20,21 @@ export default function Footer() {
                     </section>
                     <section className="footer__contact bg-white absolute">
                         <div className="contact__info flex items-center gap-4">
-                            <img className="footer__icon" src="./phone-icon.png" alt="phone icon" />
+                            <img className="footer__icon" src="/phone-icon.png" alt="phone icon" />
                             <span>
                                 <p>Ring til os</p>
                                 <p>+45 7070 4000</p>
                             </span>
                         </div>
                         <div className="contact__info flex items-center gap-4">
-                            <img className="footer__icon" src="./mail-icon.png" alt="mail icon" />
+                            <img className="footer__icon" src="/mail-icon.png" alt="mail icon" />
                             <span>
                                 <p>Send en mail</p>
                                 <p>4000@dinmaegler.com</p>
                             </span>
                         </div>
                         <div className="contact__info flex items-center gap-4">
-                            <img className="footer__icon" src="./location-icon.png" alt="location icon" />
+                            <img className="footer__icon" src="/location-icon.png" alt="location icon" />
                             <span>
                                 <p>Butik</p>
                                 <p>Stændertorvet 78, 4000 Roskilde</p>
