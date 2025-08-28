@@ -14,6 +14,7 @@ import RequireAuth from "./Components/RequireAuth";
 
 import BoligerTilSalg from "./pages/BoligerTilSalg";
 import Maeglere from "./pages/Maeglere";
+import HouseDetails from "./pages/HouseDetails";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: "boliger-salg",
                 element: <BoligerTilSalg />
+            },
+            {
+                path: "boliger-salg/:id",
+                element:<HouseDetails />
             },
             {
                 path: "maeglere",

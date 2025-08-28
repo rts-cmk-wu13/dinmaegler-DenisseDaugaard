@@ -75,18 +75,19 @@ export async function GetAllAgents() {
   });
 }
 
-/* ---------------------------------for sale--------------------------------- */
+/* --------------------------------- House by Id --------------------------------- */
 
-// export async function GetAllHousesForSale() {
+export async function GetHouseById ({id}){
+  console.log(id);
+  return queryClient.fetchQuery({
+    queryKey: ['homes', id],
+    queryFn: async function () {
+      const response = await fetch(`https://dinmaegler.onrender.com/homes/${id}`);
+      if (!response.ok) {
+        throw new Error('Den er helt gal');
+      }
+      return response.json();
+    }
+  });
+}
 
-//   return queryClient.fetchQuery({
-//     queryKey: ['homes', 'count'],
-//     queryFn: async function () {
-//       const response = await fetch('https://dinmaegler.onrender.com/homes/count');
-//       if (!response.ok) {
-//         throw new Error('Den er helt gal');
-//       }
-//       return response.json();
-//     }
-//   });
-// }

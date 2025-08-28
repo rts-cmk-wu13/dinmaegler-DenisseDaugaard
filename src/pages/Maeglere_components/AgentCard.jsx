@@ -26,6 +26,7 @@ export default function AgentCard() {
                            <div className="agent__info">
                               <h3>{agent.name}</h3>
                               <p>{agent.title}</p> 
+                              <img className="m-auto" src="./social.svg" alt={agent.name} />
                            </div>
                     </section>
                 ))}

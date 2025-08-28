@@ -1,6 +1,8 @@
-import { GetAllHouses } from "../../api/typicode";
 import { useState, useEffect } from "react";
 import { Slider, Typography, Box } from "@mui/material";
+import { Link } from "react-router";
+
+import { GetAllHouses } from "../../api/typicode";
 import SectionHeader from "../../Components/header-components/SectionHeadder";
 import HouseCard from "../Home_components/HouseCard";
 
@@ -93,8 +95,10 @@ export default function SearchBolig() {
               (selectedType === "Ejendomstype" || house.type === selectedType)
           )
           .map((house) => (
-              <HouseCard key={house.id} house={house} />
-            ))}
+            <Link to={`/boliger-salg/${house.id}`} key={house.id}>
+              <HouseCard house={house} />
+            </Link>
+          ))}
       </section>
     </>
   );

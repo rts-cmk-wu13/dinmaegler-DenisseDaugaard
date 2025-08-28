@@ -15,7 +15,7 @@ export default function BoligerTilSalg() {
         fetchData();
     }, []);
 
-    console.log(houses);
+    //console.log(houses);
 
     return (
        <>
