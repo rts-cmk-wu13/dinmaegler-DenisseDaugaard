@@ -14,6 +14,9 @@ import RequireAuth from "./Components/RequireAuth";
 import BoligerTilSalg from "./pages/BoligerTilSalg";
 import Maeglere from "./pages/Maeglere";
 import HouseDetails from "./pages/HouseDetails";
+import HouseCarousel from "./pages/HouseDetails_components/HouseCarousel";
+import HouseLocation from "./pages/HouseDetails_components/HouseLocation";
+import HouseFloorPlant from "./pages/HouseDetails_components/HouseFloorPlant";
 
 
 const router = createBrowserRouter([
@@ -47,7 +50,21 @@ const router = createBrowserRouter([
             },
             {
                 path: "boliger-salg/:id",
-                element:<HouseDetails />
+                element:<HouseDetails />,
+                children:[
+                    {
+                        path:'housecarousel',
+                        element:<HouseCarousel/>
+                    },
+                    {
+                        path: 'housefloorplant',
+                        element: <HouseFloorPlant/>
+                    },
+                    {
+                        path:"houselocation",
+                        element:<HouseLocation/>
+                    }
+                ]
             },
             {
                 path: "maeglere",

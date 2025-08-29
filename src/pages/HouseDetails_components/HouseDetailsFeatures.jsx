@@ -4,23 +4,36 @@ import { IoLayersOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 import { GrFavorite } from "react-icons/gr";
 
+import { NavLink } from "react-router";
 
 
-export default function HouseDetailsFeatures({house}) {
+
+
+
+export default function HouseDetailsFeatures({house, setModalShow}) {
 
     return (
          <section className="house__features" >
-        <div className=" flex justify-between border-b-1">
+        <div className=" flex content-center justify-between border-b-1">
             <span>
                 <p className="font-bold">{house.adress1}</p>
                 <p className="font-bold">{house.city}</p>
             </span>
-            <div className="flex">
-                <CiImageOn />
-                <IoLayersOutline />
-                <CiLocationOn />
-                <GrFavorite />
-            </div>
+            <nav className="flex text-2xl">
+                <NavLink to="housecarousel">
+                    <CiImageOn onClick={() => setModalShow(true)} />
+                </NavLink>
+                <NavLink to="housefloorplant">
+                    <IoLayersOutline onClick={() => setModalShow(true)} />
+                </NavLink>
+                <NavLink to="houselocation">
+                    <CiLocationOn onClick={() => setModalShow(true)} />
+                </NavLink>
+                <NavLink to="housefavorites">
+                    <GrFavorite onClick={() => setModalShow(true)} />
+                </NavLink>
+            </nav>
+
             <span className="font-bold">Kr. {house.price}</span>
         </div>
         <div className=" flex justify-between">
