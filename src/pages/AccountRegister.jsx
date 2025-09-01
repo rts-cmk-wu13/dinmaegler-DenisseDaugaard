@@ -1,10 +1,12 @@
-
+import SmallHero from "./boligerSalg_components/BoligSalgHero"
 
 export default function AccountRegister() {
 
     return (
         <>
-        <h1>Account register</h1>
+        <SmallHero
+        title="Account Register"/>
+    
         </>
     )
 }

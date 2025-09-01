@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import List from "./pages/List";
@@ -17,7 +17,7 @@ import HouseDetails from "./pages/HouseDetails";
 import HouseCarousel from "./pages/HouseDetails_components/HouseCarousel";
 import HouseLocation from "./pages/HouseDetails_components/HouseLocation";
 import HouseFloorPlant from "./pages/HouseDetails_components/HouseFloorPlant";
-import AccountRegister from "./pages/AccountRegister";
+import AccountRegister from "./pages/AccountRegister"
 
 
 const router = createBrowserRouter([
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "account-register",
-                errorElement : <AccountRegister/>
+                element : <AccountRegister/>
             },
             {   
                 path: "*",  
