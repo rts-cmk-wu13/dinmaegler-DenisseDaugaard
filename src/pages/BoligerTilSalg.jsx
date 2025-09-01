@@ -23,6 +23,7 @@ export default function BoligerTilSalg() {
          title="Boliger til salg"
        />
        <SearchBolig />
+       <p>Har du ikke en konto? <Link to="/account-register" className="link__add-user"> Opret bruger. </Link></p>
        </>
     )
 }

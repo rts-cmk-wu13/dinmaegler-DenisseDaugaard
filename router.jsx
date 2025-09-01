@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import { getUsers, getUser } from "./api/loaders";
 import { ErrorBoundary } from "./Components/Error";
 import { handleSubmit } from "./api/actions";
@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound";
 import Loading from "./Components/Loading";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
+import AccountRegister from "./pages/AccountRegister";
+
 
 
 const router = createBrowserRouter([
@@ -51,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login />
+            },
+            {
+                path:"account-register",
+                element: <AccountRegister/>
             },
             {   
                 path: "*",  

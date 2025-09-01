@@ -9,12 +9,16 @@ export default function Header() {
     //console.log(location.pathname)
 
     return (
-        <header className="header">
-        { location.pathname !== "/login" && (
-            <>
-                <Navigation />
-            </>
-        )}
+    //     <header className="header">
+    //     { location.pathname !== "/login" && (
+          
+    //     )}
+    //   </header>
+      <>
+      <header className="header">
+         <Navigation />
       </header>
+               
+      </>
     )
 }

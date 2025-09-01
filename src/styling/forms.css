@@ -1,0 +1,24 @@
+.login__form{
+    grid-column: 2 / span 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.login__form form{
+    width: 80%;
+    margin: auto;
+}
+
+.login__btn{
+    background-color:#162A41;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.login__opt{
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.link__add-user{
+    color: blue;
+}

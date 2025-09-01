@@ -17,6 +17,7 @@ import HouseDetails from "./pages/HouseDetails";
 import HouseCarousel from "./pages/HouseDetails_components/HouseCarousel";
 import HouseLocation from "./pages/HouseDetails_components/HouseLocation";
 import HouseFloorPlant from "./pages/HouseDetails_components/HouseFloorPlant";
+import AccountRegister from "./pages/AccountRegister";
 
 
 const router = createBrowserRouter([
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login />
+            },
+            {
+                path: "account-register",
+                errorElement : <AccountRegister/>
             },
             {   
                 path: "*",  

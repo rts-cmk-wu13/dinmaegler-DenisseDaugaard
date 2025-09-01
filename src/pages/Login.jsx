@@ -1,6 +1,8 @@
-import { Form, useLocation, useNavigate } from "react-router"
+import { Form, useLocation, useNavigate } from "react-router-dom"
 import { useAuth } from "../contexts/AuthContext"
 import { useState } from "react";
+import SmallHero from './boligerSalg_components/BoligSalgHero'
+import { Link } from "react-router-dom";
 
 export default function Login() {
     const [error, setError] = useState();
@@ -43,17 +45,35 @@ export default function Login() {
     }
 
     return (
-        <Form onSubmit={handleLogin}>
-            <div className="formgroup">
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" id="username" />
+
+        <>
+        <SmallHero
+        title="Account Login"/>
+        <div className="login__form p-4 m-4" >
+            <Form onSubmit={handleLogin}>
+                    <h1 className="text-center font-bold text-2xl">Log ind på din konto</h1>
+                <div className="formgroup flex flex-col">
+                    <label htmlFor="username">Username</label>
+                    <input className="border-1" type="text" name="username" id="username" />
+                </div>
+                <div className="formgroup flex flex-col">
+                    <label htmlFor="password">Password</label>
+                    <input className="border-1"  type="password" name="password" id="password" />
+                </div>
+                {error && (<div className="error text-amber-700 text-xs">{error}</div>)}
+                <button className="login__btn" type="submit">Log in</button>
+            </Form>
+    
+            <div className="login__options">
+                <span>Log ind med </span>
+                <div className="flex gap-3">
+                    <a className="login__opt bg-[#DD4B39]" href="#">Google</a>
+                    <a className="login__opt bg-[#3B5999]" href="#">Facebook</a>
+                    <a className="login__opt bg-[var(--primary-color)]" href="#">Twitter</a>
+                </div>
+                <p>Har du ikke en konto? <Link to="/account-register" className="link__add-user"> Opret bruger. </Link></p>
             </div>
-            <div className="formgroup">
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" />
-            </div>
-            {error && (<div>{error}</div>)}
-            <button type="submit">Log in</button>
-        </Form>
+        </div>
+        </>
     )
 }

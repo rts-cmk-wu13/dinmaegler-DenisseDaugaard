@@ -13,7 +13,7 @@ export default function LogoutButton() {
 
     return token ? (
        
-        <button onClick={handleLogout}> <FaUser /> Log out</button>
+        <button className="text-white" onClick={handleLogout}><FaUser  className="text-white"/> Log out</button>
      
-    ) : <Link to="/login"> <FaUser /> Login</Link>
+    ) : <Link className="text-white" to="/login"> <FaUser className="text-white" /> Login</Link>
 }
